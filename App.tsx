@@ -6,8 +6,14 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./src/screens/HomeScreen";
 import DemoScreen from "./src/screens/DemoScreen";
 
+export type RootStackParamList = {
+  Home: undefined;
+  Paywall: undefined;
+  Demo: undefined;
+};
+
 export default function App() {
-  const Stack = createNativeStackNavigator();
+  const Stack = createNativeStackNavigator<RootStackParamList>();
 
   return (
     <NavigationContainer>

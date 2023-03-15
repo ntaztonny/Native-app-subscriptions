@@ -3,8 +3,10 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import ActionRow from "../components/ActionRow";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView className="flex-1 bg-gray-100 relative">
       <ScrollView>

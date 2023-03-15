@@ -8,7 +8,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 export type NavigationProp = NativeStackNavigationProp<
   RootStackParamList,
-  "Demo"
+  "Home"
 >;
 
 const DemoScreen = () => {

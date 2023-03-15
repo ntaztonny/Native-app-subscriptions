@@ -1,12 +1,28 @@
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, Text, View } from "react-native";
 import TestFile from "./src/testFile";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from "./src/screens/HomeScreen";
+import DemoScreen from "./src/screens/DemoScreen";
 
 export default function App() {
+  const Stack = createNativeStackNavigator();
+
   return (
-    <SafeAreaView>
-      <TestFile />
-      <Text className="text-green-200"> This is a test Expo App!!</Text>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Home"
+          component={HomeScreen}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Demo"
+          component={DemoScreen}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
